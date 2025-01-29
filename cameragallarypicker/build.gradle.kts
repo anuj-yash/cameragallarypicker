@@ -8,7 +8,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.github.anuj-yash"
-            artifactId = "cameragallarypicker"
+            artifactId = "permissionsLibrary"
             //version = "0.0.3"
             afterEvaluate {
                 from(components["release"])
@@ -16,6 +16,8 @@ publishing {
         }
     }
 }
+
+
 
 android {
     namespace = "com.anuj.cameragallarypicker"
@@ -38,23 +40,23 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
-    java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
-        }
-    }
-//===============================
-
-    java {
-        sourceCompatibility = JavaVersion.VERSION_17            // << --- ADD This
+        sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+//    java {
+//        toolchain {
+//            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
+//        }
+//    }
+////===============================
+//
+//    java {
+//        sourceCompatibility = JavaVersion.VERSION_17            // << --- ADD This
+//        targetCompatibility = JavaVersion.VERSION_17
+//    }
 
 }
 
