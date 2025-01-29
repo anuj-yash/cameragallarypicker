@@ -34,6 +34,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)        // << --- ADD This
+        }
+    }
+//===============================
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17            // << --- ADD This
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
 dependencies {
