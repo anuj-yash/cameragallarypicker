@@ -8,7 +8,7 @@ publishing {
     publications {
         register<MavenPublication>("release") {
             groupId = "com.github.anuj-yash"
-            artifactId = "permissionsLibrary"
+            artifactId = "cameragallarypicker"
             //version = "0.0.3"
             afterEvaluate {
                 from(components["release"])
